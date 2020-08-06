@@ -10,6 +10,7 @@ public class GaneScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public new GameObject gameObject;
+    public Text opponentAnswerText;
     private int _opponentAnswer;
     void Start()
     {
@@ -34,15 +35,12 @@ public class GaneScript : MonoBehaviour
     void StartGame()
     {
         generateOpponentAnswer();
-        gameObject.GetComponentInChildren<Text>().text = _opponentAnswer.ToString();
-        //getChildGameObject(gameObject, "sprite").GetComponent<Animator>().SetBool("isGameStarted", true);
-        if (getChildGameObject(gameObject, "Sprite") == null)
-        {
-            Debug.Log("NULLLLL");
-        }
-        else
-        {
-            getChildGameObject(gameObject, "Sprite").GetComponent<Animator>().SetBool("isGameStarted", true);
-        }
+        Text opponentAnswerText = getChildGameObject(gameObject, "OpponentAnswerText").GetComponent<Text>();
+        opponentAnswerText.text = _opponentAnswer.ToString();
+
+        Text playerAnswerText = getChildGameObject(gameObject, "PlayerAnswerText").GetComponent<Text>();
+        playerAnswerText.text = playerAnswerText.text;
+
+        getChildGameObject(gameObject, "Sprite").GetComponent<Animator>().SetBool("isGameStarted", true);        
     }
 }
