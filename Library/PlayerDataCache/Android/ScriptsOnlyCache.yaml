@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonClickHandler
     - GaneScript
     - Menu
     - MenuOptions
@@ -73,25 +74,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 11762}
     - Class: 114
-      Script: {instanceID: 12074}
+      Script: {instanceID: 12076}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 12354}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 13704}
+      Script: {instanceID: 13680}
     - Class: 114
-      Script: {instanceID: 14048}
+      Script: {instanceID: 13708}
     - Class: 114
-      Script: {instanceID: 14406}
+      Script: {instanceID: 14052}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 14410}
     - Class: 114
-      Script: {instanceID: 14528}
+      Script: {instanceID: 14420}
     - Class: 114
-      Script: {instanceID: 15210}
+      Script: {instanceID: 14532}
+    - Class: 114
+      Script: {instanceID: 15214}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -140,31 +143,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 11762}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 12914}
+      Script: {instanceID: 12918}
     - Class: 114
-      Script: {instanceID: 13704}
+      Script: {instanceID: 13708}
     - Class: 114
-      Script: {instanceID: 13838}
+      Script: {instanceID: 13842}
     - Class: 114
-      Script: {instanceID: 14048}
+      Script: {instanceID: 14052}
     - Class: 114
-      Script: {instanceID: 14070}
+      Script: {instanceID: 14074}
     - Class: 114
-      Script: {instanceID: 14406}
+      Script: {instanceID: 14410}
     - Class: 114
-      Script: {instanceID: 14416}
+      Script: {instanceID: 14420}
     - Class: 114
-      Script: {instanceID: 14528}
+      Script: {instanceID: 14532}
     - Class: 114
-      Script: {instanceID: 14844}
+      Script: {instanceID: 14848}
     - Class: 114
-      Script: {instanceID: 15028}
+      Script: {instanceID: 15032}
     - Class: 114
-      Script: {instanceID: 15210}
+      Script: {instanceID: 15214}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -326,6 +329,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 3cbe666ec9286af7a00a01dc706e2ee4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonClickHandler
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -520,7 +529,7 @@ ScriptsOnlyBuild:
     className: ChatController
   - hash:
       serializedVersion: 2
-      Hash: 3cbe666ec9286af7a00a01dc706e2ee4
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GaneScript

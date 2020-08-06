@@ -13,48 +13,53 @@ public class ButtonClickHandler : MonoBehaviour
     private int _playerAnswer;
     private Text _playerAnswerText;
     private Text _gameStatusText;
-    
+
     public void OnClick()
     {       
         string text = EventSystem.current.currentSelectedGameObject.GetComponent<Button>().GetComponentInChildren<TextMeshProUGUI>().text;
-        _gameStatusText = getChildGameObject(gameObject, "GameStatusText").GetComponent<Text>();
+        _gameStatusText = GetChildGameObject(gameObject, "GameStatusText").GetComponent<Text>();
 
-        setPlayerAnswer(text);
-        setOpponentAnswer();
-        getTheWinner();
-        
+        SetPlayerAnswer(text);
+        SetOpponentAnswer();
+        PlayAnimation();
+        GetTheWinner();
     }
-    public void setOpponentAnswer()
+    public void PlayAnimation()
     {
-        generateOpponentAnswer();
-        Text opponentAnswerText = getChildGameObject(gameObject, "OpponentAnswerText").GetComponent<Text>();
+        GetChildGameObject(gameObject, "PlayerSprite").GetComponent<Animator>().SetInteger("showHand", _playerAnswer);
+        GetChildGameObject(gameObject, "OponentSprite").GetComponent<Animator>().SetInteger("showHand", _opponentAnswer);
+    }
+    public void SetOpponentAnswer()
+    {
+        GenerateOpponentAnswer();
+        Text opponentAnswerText = GetChildGameObject(gameObject, "OpponentAnswerText").GetComponent<Text>();
         opponentAnswerText.text = _opponentAnswer.ToString();
     }
-    public void setPlayerAnswer(string text)
+    public void SetPlayerAnswer(string text)
     {
-        _playerAnswerText = getChildGameObject(gameObject, "PlayerAnswerText").GetComponent<Text>();
+        _playerAnswerText = GetChildGameObject(gameObject, "PlayerAnswerText").GetComponent<Text>();
         _playerAnswerText.text = text;
         _playerAnswer = int.Parse(text);
     }
-    void getTheWinner()
+    void GetTheWinner()
     {
         if ((_opponentAnswer + _playerAnswer) % 2 != 0)
         {
-            _gameStatusText.text = "YOU LOOSE!";
+            _gameStatusText.text = "YOU LOST!";
             _gameStatusText.color = new Color(139, 0, 0);
         }
         else
         {
-            _gameStatusText.text = "YOU WIN!";
-            _gameStatusText.color = new Color(123, 123, 123);
+            _gameStatusText.text = "YOU WON!";
+            _gameStatusText.color = new Color(0, 0, 0);            
         }
     }
-    void generateOpponentAnswer()
+    void GenerateOpponentAnswer()
     {
         Random random = new Random();
         _opponentAnswer = random.Next(1, 6);
     }
-    static public GameObject getChildGameObject(GameObject fromGameObject, string withName)
+    static public GameObject GetChildGameObject(GameObject fromGameObject, string withName)
     {
         //Author: Isaac Dart, June-13.
         Transform[] ts = fromGameObject.transform.GetComponentsInChildren<Transform>(true);
