@@ -103,7 +103,7 @@
 58-->/Users/infinitymesh/Mobile_Game_Test/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:5-101
 59            android:name="unity.build-id"
 59-->/Users/infinitymesh/Mobile_Game_Test/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:16-45
-60            android:value="ea18aae6-56af-4634-a9b1-8acb250ad127" />
+60            android:value="399e5e24-cc46-482d-bb7d-f2118ae1e5d2" />
 60-->/Users/infinitymesh/Mobile_Game_Test/Temp/gradleOut/unityLibrary/src/main/AndroidManifest.xml:16:46-98
 61    </application>
 62

@@ -69,18 +69,19 @@ public class ButtonClickHandler : MonoBehaviour
         GetTheWinner();
         yield return new WaitForSeconds(1.33f);
         //After we have waited 5 seconds print the time again.
-        //GameObject go = Instantiate(gameStatusPopUp, new Vector3(0, 0, -10000), Quaternion.identity, gameObject.GetComponentInParent<Canvas>().transform);
-        //go.transform.localScale = new Vector3(1, 1, 1);
-        //if ((_opponentAnswer + _playerAnswer) % 2 != 0)
-        //{
-        //    go.GetComponentInChildren<Text>().text = "YOU LOST!";
-        //    go.GetComponentInChildren<Text>().color = new Color(139, 0, 0);
-        //}
-        //else
-        //{
-        //    go.GetComponentInChildren<Text>().text = "YOU WON!";
-        //    go.GetComponentInChildren<Text>().color = new Color(0, 0, 0);
-        //}
+        GameObject go = Instantiate(gameStatusPopUp, new Vector3(0, 0, -2), Quaternion.identity, gameObject.GetComponentInParent<Canvas>().transform);
+        go.transform.localScale = new Vector3(1, 1, 1);
+        go.transform.localPosition = new Vector3(go.transform.localPosition.x, go.transform.localPosition.y, -2);
+        if ((_opponentAnswer + _playerAnswer) % 2 != 0)
+        {
+            go.GetComponentInChildren<Text>().text = "YOU LOST!";
+            go.GetComponentInChildren<Text>().color = new Color(139, 0, 0);
+        }
+        else
+        {
+            go.GetComponentInChildren<Text>().text = "YOU WON!";
+            go.GetComponentInChildren<Text>().color = new Color(0, 0, 0);
+        }
     }
     static public GameObject GetChildGameObject(GameObject fromGameObject, string withName)
     {
