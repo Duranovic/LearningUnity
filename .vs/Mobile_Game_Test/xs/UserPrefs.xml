@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GaneScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ButtonClickHandler.cs">
     <Files>
       <File FileName="Assets/Scripts/Menu.cs" Line="17" Column="6" />
-      <File FileName="Assets/Scripts/MenuOptions.cs" Line="7" Column="30" />
-      <File FileName="Assets/Scripts/GaneScript.cs" Line="16" Column="6" />
-      <File FileName="Assets/Scripts/ButtonClickHandler.cs" Line="14" Column="55" />
+      <File FileName="Assets/Scripts/MenuOptions.cs" />
+      <File FileName="Assets/Scripts/GaneScript.cs" />
+      <File FileName="Assets/Scripts/ButtonClickHandler.cs" Line="17" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,7 @@
             <Node name="Assembly-CSharp" expanded="True">
               <Node name="Assets" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="GaneScript.cs" selected="True" />
+                  <Node name="ButtonClickHandler.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
